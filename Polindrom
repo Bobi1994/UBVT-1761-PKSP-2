@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+import java.lang.String;
+public class Main {
+
+    public static void main(String[] args) {
+	System.out.print("Введите слово, предложение или число для проверки: ");
+	Scanner strn = new Scanner(System.in);
+	String str = strn.nextLine();
+	System.out.println();
+	String str1= "";
+	String str2= "";
+        for (int i =0; i<str.length(); i++ ){
+            str.charAt(i);
+            if(str.charAt(i)!=' '&& str.charAt(i)!=','&& str.charAt(i)!='-'&& str.charAt(i)!='.')
+            {
+                str2+=str.charAt(i);
+            }
+            else continue;
+        }
+
+        for (int i =str.length()-1; i>=0; i-- ){
+            str.charAt(i);
+            if(str.charAt(i)!=' '&& str.charAt(i)!=','&& str.charAt(i)!='-'&& str.charAt(i)!='.')
+            {
+            str1+=str.charAt(i);
+            }
+            else continue;
+        }
+
+        if(str2.equalsIgnoreCase(str1)==true)
+        {
+            System.out.println(str +" - ПОЛИНДРОМОМ!!!");
+        }
+        else {
+            System.out.println(str +" - НЕ ПОЛИНДРОМОМ!!!");
+        }
+
+
+    }
+
+}

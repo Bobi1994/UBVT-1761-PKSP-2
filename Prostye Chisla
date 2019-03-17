@@ -1,0 +1,50 @@
+
+import java.util.Scanner;
+import java.lang.String;
+
+public class EasyNumber {
+    public static void main(String[] args) {
+
+        System.out.print("Введите натуральное число от 2 до 168: ");
+        Scanner num = new Scanner(System.in);
+        int chislo = num.nextInt();
+          if (chislo >= 2 && chislo <= 168) {
+            int[] aray;
+            int c = 0;
+            aray = new int[chislo];
+            for (int i = 0; i < chislo; i++) {
+                aray[i] = i + 1;
+            }
+            System.out.println("Ряд ПРОСТЫХ чисел, которые содержит число: " + chislo);
+            for (int i = 1; i < chislo; i++) {
+                c = aray[i];
+                if (c == 2 || c == 3 || c == 5 || c == 7 || c == 11) {
+                    System.out.print(aray[i] + "  ");
+                    continue;
+                }
+                c %= 2;
+                if (c == 0) continue;
+                c = aray[i];
+                c %= 3;
+                if (c == 0) continue;
+                c = aray[i];
+                c %= 5;
+                if (c == 0) continue;
+                c = aray[i];
+                c %= 7;
+                if (c == 0) continue;
+                c = aray[i];
+                c %= 11;
+                if (c == 0) continue;
+                if (c != 0) {
+                    System.out.print(aray[i] + "  ");
+                    continue;
+                }
+            }
+
+        }else
+        {
+            System.out.println("Вы ввели неверное число!!!");
+        }
+    }
+}
