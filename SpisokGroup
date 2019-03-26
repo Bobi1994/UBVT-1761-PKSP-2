@@ -1,0 +1,37 @@
+_group =[
+{
+"name" : "Вася",
+"lastname"  :  "Иванов",
+"nomber"  :  "УБВТ - 1761",
+"ocenki"  : "5"
+},
+{
+"name" : "Иван",
+"lastname" : "Титов",
+"nomber" : "УБВТ - 1761",
+"ocenki" :"4"
+},
+{
+"name" : "Михаил",
+"lastname" : "Улетаев",
+"nomber" : "УБВТ - 1761",
+"ocenki" :"3"
+},
+{
+"name" : "Даниил",
+"lastname" : "Страхов",
+"nomber" : "УБВТ - 1761",
+"ocenki" :"4"
+}
+]
+def print_students():
+    print("name:")
+    print("lastname:")
+    print("nomber:")
+    print("ocenki:")
+
+
+print(print_students())
+
+for students in _group:
+    print(students)
