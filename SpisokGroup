@@ -1,37 +1,37 @@
 _group =[
 {
-"name" : "Вася",
-"lastname"  :  "Иванов",
-"nomber"  :  "УБВТ - 1761",
-"ocenki"  : "5"
+"Name" : "Вася",
+"Lastname"  :  "Иванов",
+"NumberGroup"  :  "УБВТ - 1761",
+"Ocenki"  : ['5','4','4']
 },
 {
-"name" : "Иван",
-"lastname" : "Титов",
-"nomber" : "УБВТ - 1761",
-"ocenki" :"4"
+"Name" : "Иван",
+"Lastname" : "Титов",
+"NumberGroup" : "УБВТ - 1761",
+"Ocenki" :['4','3','3']
 },
 {
-"name" : "Михаил",
-"lastname" : "Улетаев",
-"nomber" : "УБВТ - 1761",
-"ocenki" :"3"
+"Name" : "Михаил",
+"Lastname" : "Улетаев",
+"NumberGroup" : "УБВТ - 1761",
+"Ocenki" :['5','5','5']
 },
 {
-"name" : "Даниил",
-"lastname" : "Страхов",
-"nomber" : "УБВТ - 1761",
-"ocenki" :"4"
+"Name" : "Даниил",
+"Lastname" : "Страхов",
+"NumberGroup" : "УБВТ - 1761",
+"Ocenki" :['3','3','4']
 }
 ]
-def print_students():
-    print("name:")
-    print("lastname:")
-    print("nomber:")
-    print("ocenki:")
-
-
-print(print_students())
-
-for students in _group:
-    print(students)
+print("ListGroup:")
+print(sep='\n')
+i=0
+while i<4:
+    print("Student №",i+1,":")
+    print("Name:",_group[i]['Name'])
+    print("Lastname:",_group[i]['Lastname'])
+    print("NumberGroup:",_group[i]['NumberGroup'])
+    print("Ocenki:",_group[i]['Ocenki'])
+    i+=1
+    print(sep='\n')
